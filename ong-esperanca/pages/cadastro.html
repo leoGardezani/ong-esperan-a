@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de Voluntários e Doadores | Instituto Semear Esperança</title>
+  <meta name="description" content="Cadastre-se como voluntário ou doador do Instituto Semear Esperança. Preencha o formulário com seus dados e escolha como quer ajudar.">
+  <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/formulario.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo.svg" alt="" width="44" height="44">
+        <span>Semear Esperança</span>
+      </a>
+      <nav class="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Seja voluntário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container">
+    <h1>Cadastro de colaboradores</h1>
+    <p>Preencha o formulário para se tornar voluntário ou doador. Campos marcados com <span class="obrigatorio" aria-hidden="true">*</span><span class="sr-only">asterisco</span> são obrigatórios.</p>
+
+    <section aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Formulário de cadastro</h2>
+
+      <div id="mensagem-status" role="status" aria-live="polite" hidden></div>
+
+      <form id="form-cadastro" class="formulario" action="#" method="post">
+
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <div class="campos">
+            <div class="campo campo--larga">
+              <label for="nome">Nome completo <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="nome" name="nome" required minlength="5" maxlength="100" autocomplete="name" aria-describedby="erro-nome">
+              <span class="erro" id="erro-nome" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required maxlength="120" autocomplete="email" placeholder="nome@exemplo.com" aria-describedby="erro-email">
+              <span class="erro" id="erro-email" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="cpf">CPF <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="cpf" name="cpf" required inputmode="numeric" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" autocomplete="off" aria-describedby="dica-cpf erro-cpf">
+              <span class="dica" id="dica-cpf">Somente números; a máscara é aplicada automaticamente.</span>
+              <span class="erro" id="erro-cpf" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="tel" id="telefone" name="telefone" required inputmode="numeric" maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" placeholder="(11) 91234-5678" autocomplete="tel" aria-describedby="erro-telefone">
+              <span class="erro" id="erro-telefone" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="nascimento">Data de nascimento <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="date" id="nascimento" name="nascimento" required min="1900-01-01" autocomplete="bday" aria-describedby="dica-nasc erro-nascimento">
+              <span class="dica" id="dica-nasc">É necessário ter 18 anos ou mais.</span>
+              <span class="erro" id="erro-nascimento" aria-live="polite"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+          <div class="campos">
+            <div class="campo">
+              <label for="cep">CEP <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="cep" name="cep" required inputmode="numeric" maxlength="9" pattern="\d{5}-\d{3}" placeholder="00000-000" autocomplete="postal-code" aria-describedby="dica-cep erro-cep">
+              <span class="dica" id="dica-cep">Ao preencher, tentamos completar o endereço automaticamente.</span>
+              <span class="erro" id="erro-cep" aria-live="polite"></span>
+            </div>
+
+            <div class="campo campo--larga">
+              <label for="logradouro">Rua / Avenida <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="logradouro" name="logradouro" required maxlength="120" autocomplete="address-line1" aria-describedby="erro-logradouro">
+              <span class="erro" id="erro-logradouro" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="numero">Número <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="numero" name="numero" required maxlength="10" aria-describedby="erro-numero">
+              <span class="erro" id="erro-numero" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="complemento">Complemento</label>
+              <input type="text" id="complemento" name="complemento" maxlength="60">
+            </div>
+
+            <div class="campo">
+              <label for="bairro">Bairro <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="bairro" name="bairro" required maxlength="80" aria-describedby="erro-bairro">
+              <span class="erro" id="erro-bairro" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="cidade">Cidade <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="cidade" name="cidade" required maxlength="80" autocomplete="address-level2" aria-describedby="erro-cidade">
+              <span class="erro" id="erro-cidade" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="uf">Estado <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <select id="uf" name="uf" required aria-describedby="erro-uf">
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <span class="erro" id="erro-uf" aria-live="polite"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Como você quer ajudar?</legend>
+          <div class="campos">
+            <div class="campo campo--larga">
+              <fieldset class="opcoes" aria-describedby="erro-tipo">
+                <legend>Tipo de apoio <span class="obrigatorio" aria-hidden="true">*</span></legend>
+                <label class="opcao"><input type="radio" name="tipo" value="voluntario" required> Voluntário</label>
+                <label class="opcao"><input type="radio" name="tipo" value="doador"> Doador</label>
+                <label class="opcao"><input type="radio" name="tipo" value="ambos"> Os dois</label>
+              </fieldset>
+              <span class="erro" id="erro-tipo" aria-live="polite"></span>
+            </div>
+
+            <div class="campo campo--larga">
+              <fieldset class="opcoes">
+                <legend>Projetos de interesse</legend>
+                <label class="opcao"><input type="checkbox" name="interesse" value="semear-letras"> Semear Letras</label>
+                <label class="opcao"><input type="checkbox" name="interesse" value="cultura-viva"> Cultura Viva</label>
+                <label class="opcao"><input type="checkbox" name="interesse" value="cozinha-solidaria"> Cozinha Solidária</label>
+                <label class="opcao"><input type="checkbox" name="interesse" value="mutirao-saude"> Mutirão de Saúde</label>
+              </fieldset>
+            </div>
+
+            <div class="campo">
+              <label for="disponibilidade">Disponibilidade <span class="obrigatorio" aria-hidden="true">*</span></label>
+              <select id="disponibilidade" name="disponibilidade" required aria-describedby="erro-disponibilidade">
+                <option value="">Selecione</option>
+                <option value="semana-manha">Dias úteis, manhã</option>
+                <option value="semana-tarde">Dias úteis, tarde</option>
+                <option value="fim-de-semana">Fins de semana</option>
+                <option value="eventual">Eventualmente</option>
+              </select>
+              <span class="erro" id="erro-disponibilidade" aria-live="polite"></span>
+            </div>
+
+            <div class="campo campo--larga">
+              <label for="mensagem">Mensagem (opcional)</label>
+              <textarea id="mensagem" name="mensagem" maxlength="500" aria-describedby="contador-mensagem"></textarea>
+              <span class="dica" id="contador-mensagem">0 / 500 caracteres</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label class="opcao">
+            <input type="checkbox" id="lgpd" name="lgpd" required aria-describedby="erro-lgpd">
+            <span>Concordo com o uso dos meus dados para contato pelo Instituto, conforme a LGPD. <span class="obrigatorio" aria-hidden="true">*</span></span>
+          </label>
+          <span class="erro" id="erro-lgpd" aria-live="polite"></span>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" class="botao botao--primario">Enviar cadastro</button>
+          <button type="reset" class="botao botao--neutro">Limpar formulário</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grade">
+        <section aria-labelledby="rodape-contato">
+          <h2 id="rodape-contato">Contato</h2>
+          <address>
+            Rua da Esperança, 123 – Centro<br>
+            São Paulo – SP, 01000-000<br>
+            <a href="mailto:contato@semearesperanca.org.br">contato@semearesperanca.org.br</a><br>
+            <a href="tel:+551140000000">(11) 4000-0000</a>
+          </address>
+        </section>
+        <nav aria-labelledby="rodape-links">
+          <h2 id="rodape-links">Navegue</h2>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cadastro.html">Seja voluntário</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2026 Instituto Semear Esperança. Site desenvolvido para fins acadêmicos.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="t d">
+  <title id="t">Voluntários e crianças em uma horta comunitária</title>
+  <desc id="d">Ilustração de três adultos e duas crianças plantando mudas em uma horta sob um céu claro com sol.</desc>
+  <rect width="800" height="400" fill="#dff1ea"/>
+  <circle cx="680" cy="80" r="44" fill="#e8a33d"/>
+  <path d="M0 260 Q200 200 400 250 T800 240 V400 H0Z" fill="#8cc9a8"/>
+  <path d="M0 310 Q250 270 480 310 T800 300 V400 H0Z" fill="#1f6f5c"/>
+  <g fill="#14493c">
+    <rect x="120" y="330" width="560" height="8" rx="4"/>
+  </g>
+  <g>
+    <circle cx="200" cy="220" r="22" fill="#f2c9a0"/><rect x="178" y="242" width="44" height="70" rx="14" fill="#e8a33d"/>
+    <circle cx="320" cy="245" r="17" fill="#d9a877"/><rect x="303" y="262" width="34" height="50" rx="12" fill="#ffffff"/>
+    <circle cx="430" cy="215" r="22" fill="#a9754f"/><rect x="408" y="237" width="44" height="75" rx="14" fill="#14493c"/>
+    <circle cx="545" cy="248" r="16" fill="#f2c9a0"/><rect x="529" y="264" width="32" height="48" rx="12" fill="#e8a33d"/>
+    <circle cx="640" cy="222" r="21" fill="#7b4f34"/><rect x="619" y="243" width="42" height="69" rx="14" fill="#ffffff"/>
+  </g>
+  <g stroke="#14493c" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M250 335v-18M370 335v-18M490 335v-18M590 335v-18"/>
+  </g>
+  <g fill="#e8a33d">
+    <path d="M250 317c-10 0-14-8-14-14 8 0 14 5 14 14z"/><path d="M370 317c-10 0-14-8-14-14 8 0 14 5 14 14z"/>
+    <path d="M490 317c-10 0-14-8-14-14 8 0 14 5 14 14z"/><path d="M590 317c-10 0-14-8-14-14 8 0 14 5 14 14z"/>
+  </g>
+</svg>
